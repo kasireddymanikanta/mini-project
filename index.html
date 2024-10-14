@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train Ticket Booking</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="train-logo.jpg" alt="Train Logo" class="logo">
+        <h1>Train Ticket Booking</h1>
+    </header>
+
+    <section class="booking-form">
+        <h2>Book Your Train Tickets</h2>
+        <form id="ticketForm" onsubmit="return validateForm()">
+            <!-- Personal Information -->
+            <fieldset>
+                <legend>Passenger Information</legend>
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="gender">Gender:</label>
+                    <select id="gender" name="gender" required>
+                        <option value="">Select Gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+            </fieldset>
+
+            <!-- Travel Information -->
+            <fieldset>
+                <legend>Travel Details</legend>
+                <div class="form-group">
+                    <label for="date">Date of Travel:</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="from">Departure Station:</label>
+                    <input type="text" id="from" name="from" placeholder="Enter departure station" required>
+                    <img src="station-icon.png" alt="Station Icon" class="icon">
+                </div>
+                <div class="form-group">
+                    <label for="to">Destination Station:</label>
+                    <input type="text" id="to" name="to" placeholder="Enter destination station" required>
+                    <img src="station-icon.png" alt="Station Icon" class="icon">
+                </div>
+                <div class="form-group">
+                    <label for="class">Class:</label>
+                    <select id="class" name="class" required>
+                        <option value="">Select Class</option>
+                        <option value="Sleeper">Sleeper</option>
+                        <option value="AC">AC</option>
+                        <option value="First Class">First Class</option>
+                    </select>
+                </div>
+            </fieldset>
+
+            <!-- Booking Information -->
+            <fieldset>
+                <legend>Booking Details</legend>
+                <div class="form-group">
+                    <label for="seats">Number of Seats:</label>
+                    <input type="number" id="seats" name="seats" min="1" max="10" placeholder="Enter number of seats" required>
+                </div>
+                <div class="form-group">
+                    <label for="payment">Payment Method:</label>
+                    <select id="payment" name="payment" required>
+                        <option value="">Select Payment Method</option>
+                        <option value="Credit Card">Credit Card</option>
+                        <option value="Debit Card">Debit Card</option>
+                        <option value="UPI">UPI</option>
+                        <option value="Net Banking">Net Banking</option>
+                    </select>
+                </div>
+            </fieldset>
+
+            <div class="form-group">
+                <button type="submit">Book Now</button>
+            </div>
+        </form>
+
+        <p id="message"></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Train Ticket Booking </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
